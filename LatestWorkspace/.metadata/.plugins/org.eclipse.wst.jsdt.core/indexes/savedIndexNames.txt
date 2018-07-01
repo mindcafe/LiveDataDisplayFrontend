@@ -1,0 +1,8 @@
+INDEX VERSION 1.3+D:\Mind Cafe\LatestWorkspace\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+239233940.index
+4103260431.index
+1786067427.index
+2213480222.index
+115187051.index
+497786411.index
+239233940.index
