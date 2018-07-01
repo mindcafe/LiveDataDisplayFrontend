@@ -1,0 +1,5 @@
+INDEX VERSION 1.121+D:\Mind Cafe\GitManagemet\LiveDataDisplayFrontend\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+844441093.index
+2527355687.index
+3343098400.index
+3659964904.index
