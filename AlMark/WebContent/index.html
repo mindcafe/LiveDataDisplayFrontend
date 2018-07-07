@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>ALMark Development</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="libraries/bootstrap.min.css">
+  <script src="libraries/jquery-3.3.1.min.js"></script>
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <!-- <script src="libraries/jquery-3.3.1.min.map"></script> -->
+  <script src="libraries/bootstrap.bundle.min.js"></script>
+  
+  <script>
+$(document).ready(function(){
+    $("#a").click(function(){
+    	
+        $.ajax({url: 'https://66cfdaeb-3982-4599-af5a-03db28e5741d.mock.pstmn.io/witsLogData', success: function(result){
+           	/* console.log(result); */
+           	
+           	var a = $(result).find('log').find('name').text();
+           	console.log(a);
+            /* $(result).find('logData').each(function() {
+           		var s = $(this).find('data').text();
+            console.log(s);  */
+            
+            var sss=10;
+    		 $('#div1 ul').append(sss);
+    		console.log(sss);
+       		/* var data1 = $(result).find('data').text();
+       		$('#div1 ul').append(data1);
+    		console.log(data1); */
+    		
+    		var yourArray = [];
+            $(result).find('logData data').each(function(i) {
+           		 var s = $(this).text();
+           		
+           	/* $.each([$(s)], function) */
+           	$('#div1 ul').append
+           		( 
+           		$( '<li />',
+           			 { 
+						text:  + i 
+						/* text: yourArray[1] + i */
+						
+           			} 
+           		)
+           	);
+           	yourArray[i]=s;
+           	});
+            
+            console.log(yourArray[4]);
+            var splitValue = yourArray[4].split(',');
+            
+            $('#dataDisplay ul').append('    ' + yourArray[4] );
+            $('#dataDisplay ul').append('<br>');
+            $('#dataDisplay ul').append('<br>');
+            $('#dataInstance ul').append('    ' + splitValue[0] );
+            $('#dataInstance ul').append('<br>');
+            $('#dataInstance ul').append('<br>');
+            $('#dataInstance ul').append('    ' + splitValue[4]);
+            
+        }});
+    });
+});
+</script>
+
+ </head>
+<body>
+
+<div id="div1"><h6>Shantanu Test</h6>
+<ul>
+</ul>
+</div>
+
+<button>Get External Content</button>
+
+<div id="dataDisplay"><h4>Total Data Display</h4>
+<ul>
+</ul>
+</div>
+
+<button>Click to get the data</button>
+
+<div id="dataInstance"><h2>Data Extract from a Data Set</h2>
+<ul>
+</ul>
+</div>
+
+<button id="a">Click to get the data</button>
+
+
+</body>
+</html>
