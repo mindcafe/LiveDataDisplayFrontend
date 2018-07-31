@@ -1,0 +1,71 @@
+<logs>
+  <log >
+    <nameWell>BIGFOOT 106105B-34 51H</nameWell>
+    <nameWellbore>BIGFOOT 106105B-34 51H</nameWellbore>
+    <name>Time_1Sec</name>
+    <objectGrowing>false</objectGrowing>
+    <dataRowCount>2595305</dataRowCount>
+    <serviceCompany>NOV</serviceCompany>
+    <indexType>date time</indexType>
+    <stepIncrement uom="s">1</stepIncrement>
+    <startDateTimeIndex>2018-02-26T05:30:09.0000000-06:00</startDateTimeIndex>
+    <endDateTimeIndex>2018-02-26T05:35:54.0000000-06:00</endDateTimeIndex>
+    <direction>increasing</direction>
+    <indexCurve columnIndex="1">RIGTIME</indexCurve>
+    <nullValue>-999.25</nullValue>
+    <logCurveInfo uid="0">
+      <mnemonic>RIGTIME</mnemonic>
+      <unit>DateTime</unit>
+      <nullValue>-999.25</nullValue>
+      <minDateTimeIndex>2018-02-26T05:30:09.0000000-06:00</minDateTimeIndex>
+      <maxDateTimeIndex>2018-02-26T05:35:54.0000000-06:00</maxDateTimeIndex>
+      <columnIndex>1</columnIndex>
+      <curveDescription>RIGTIME</curveDescription>
+      <typeLogData>date time</typeLogData>
+    </logCurveInfo>
+    <logCurveInfo uid="3932161">
+      <mnemonic>ACC_DRILL_STRKS</mnemonic>
+      <unit>strokes</unit>
+      <nullValue>-999.25</nullValue>
+      <columnIndex>2</columnIndex>
+      <curveDescription>Strks - Acc Drill</curveDescription>
+      <typeLogData>double</typeLogData>
+    </logCurveInfo>
+    <logCurveInfo uid="3997697">
+      <mnemonic>ACC_FILL_STRKS</mnemonic>
+      <unit>strokes</unit>
+      <nullValue>-999.25</nullValue>
+      <minDateTimeIndex>2018-02-26T05:30:09.0000000-06:00</minDateTimeIndex>
+      <maxDateTimeIndex>2018-02-26T05:35:54.0000000-06:00</maxDateTimeIndex>
+      <columnIndex>3</columnIndex>
+      <curveDescription>Strks - Acc Fill</curveDescription>
+      <typeLogData>double</typeLogData>
+    </logCurveInfo>
+    <logCurveInfo uid="30212097">
+      <mnemonic>ACCUM_TRIP_IN</mnemonic>
+      <unit>bbl</unit>
+      <nullValue>-999.25</nullValue>
+      <minDateTimeIndex>2018-02-26T05:30:09.0000000-06:00</minDateTimeIndex>
+      <maxDateTimeIndex>2018-02-26T05:35:54.0000000-06:00</maxDateTimeIndex>
+      <columnIndex>4</columnIndex>
+      <curveDescription>Accum Trip In</curveDescription>
+      <typeLogData>double</typeLogData>
+    </logCurveInfo>
+    <logCurveInfo uid="30277633">
+      <mnemonic>ACCUM_TRIP_OUT</mnemonic>
+      <unit>bbl</unit>
+      <nullValue>-999.25</nullValue>
+      <minDateTimeIndex>2018-02-26T05:30:09.0000000-06:00</minDateTimeIndex>
+      <maxDateTimeIndex>2018-02-26T05:35:54.0000000-06:00</maxDateTimeIndex>
+      <columnIndex>5</columnIndex>
+      <curveDescription>Accum Trip Out</curveDescription>
+      <typeLogData>double</typeLogData>
+    </logCurveInfo>
+    <logData>
+      <data>2018-02-26T05:30:09-06:00,,485264.3,2099.038,2075.006</data>
+      <data>2018-02-26T05:30:10-06:00,,585264.3,4099.038,6075.006</data>
+      <data>2018-02-26T05:35:53-06:00,,685264.3,5099.038,8075.978</data>
+      <data>2018-02-26T05:35:54-06:00,,785264.3,6099.038,9075.978</data>
+    </logData>
+  </log>
+</logs>

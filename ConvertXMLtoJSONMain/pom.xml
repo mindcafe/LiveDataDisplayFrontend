@@ -1,0 +1,83 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.AlMark</groupId>
+  <artifactId>ConvertXMLtoJSONMain</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
+
+  <name>ConvertXMLtoJSONMain</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencies>
+  	<!-- https://mvnrepository.com/artifact/org.mongodb/mongo-java-driver -->
+	<dependency>
+    	<groupId>org.mongodb</groupId>
+    	<artifactId>mongo-java-driver</artifactId>
+    	<version>3.8.0</version>	
+	</dependency>
+
+  	
+  	<dependency>
+      <groupId>com.google.code.gson</groupId>
+      <artifactId>gson</artifactId>
+      <version>2.5</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>javax.xml.bind</groupId>
+      <artifactId>jaxb-api</artifactId>
+      <version>2.2.3</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+  
+  <build>
+    <!-- <finalName>ConvertXMLtoJSON</finalName> -->
+    <sourceDirectory>src/main/java</sourceDirectory>
+    <resources>
+        <resource>
+            <directory>src/main/resources</directory>
+        </resource>
+    </resources>
+     <plugins>
+     	<plugin>
+     		<groupId>org.apache.maven.plugins</groupId>
+     		<artifactId>maven-shade-plugin</artifactId>
+     		<version>2.3</version>
+     		<configuration>
+     			<source>src</source>
+     			<target>target</target>
+     		</configuration>
+     	</plugin>
+     	<plugin>
+    		<artifactId>maven-war-plugin</artifactId>
+    		<version>2.6</version>
+    		<configuration>
+        		<failOnMissingWebXml>false</failOnMissingWebXml>
+    		</configuration>
+		</plugin>
+        
+           <!-- Config: Maven Tomcat Plugin -->
+           <!-- http://mvnrepository.com/artifact/org.apache.tomcat.maven/tomcat7-maven-plugin%20-->
+           <plugin>
+               <groupId>org.apache.tomcat.maven</groupId>
+               <artifactId>tomcat7-maven-plugin</artifactId>
+               <version>2.2</version>
+               <!-- Config: contextPath and Port (Default - /SimpleMavenWebApp : 8080) -->
+               
+               <configuration>
+                   <!-- <path>D:\Mind Cafe\softwares\apache-tomcat-8.0.52</path> -->
+                   <port>9005</port>
+                   <useTestClasspath>true</useTestClasspath>
+               </configuration>
+               
+           </plugin>
+     </plugins>
+  </build>
+</project>

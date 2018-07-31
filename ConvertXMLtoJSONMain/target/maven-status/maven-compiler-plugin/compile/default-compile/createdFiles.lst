@@ -1,0 +1,5 @@
+com\AlMark\bean\LogData.class
+com\AlMark\ConvertXMLtoJSONMain\App.class
+com\AlMark\bean\Log.class
+com\AlMark\bean\LogCurveInfo.class
+com\AlMark\bean\Logs.class
